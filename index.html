@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>knowthespace</title>
+    <h1 align="center">KNOW THE SPACE</h1>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-image: url('tr.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: #000000;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        select {
+            font-size: 16px;
+            padding: 8px;
+            margin-top: 10px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.8); 
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        #destinationInfo {
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        #destinationInfo h2 {
+            margin-top: 0;
+        }
+
+        #destinationInfo p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p>Travel planning at its best. Build, organise, and map your custom in a free travel website designed for vacations, food places, accommodation, scenaries & road trips.</p>
+    <h1>Select a Destination</h1>
+    <select id="destinationSelect" onchange="showInfo()">
+        <option value="">Select Destination</option>
+        <option value="Kannur">Kannur</option>
+        <option value="Alappuzha">Alappuzha</option>
+        <option value="Idukki">Idukki</option>
+        <!-- Add more destinations as needed -->
+    </select>
+
+    <div id="destinationInfo">
+        <!-- Information about the selected destination will be displayed here -->
+    </div>
+
+
+</body>
+</html>
