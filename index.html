@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tourist Destination Information</title>
+    <title>knowthespace</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            background-image: url('pietro-de-grandi-T7K4aEPoGGk-unsplash.jpg'); /* Replace 'background-image.jpg' with the path to your background image */
+            padding:10%;
+            background-image: url('photo-1475070929565-c985b496cb9f.avif'); /* Replace 'background-image.jpg' with the path to your background image */
             background-size: cover;
             background-position: center;
-            color:black; /* Set text color to white for better contrast */
+            color:rgb(0, 0, 0); /* Set text color to white for better contrast */
         }
 
         h1 {
@@ -48,7 +48,7 @@
     </style>
 </head>
 <body>
-    <h1>Select a Destination</h1>
+    <h1><b><u>Select a Destination</u></b></h1>
     <select id="destinationSelect" onchange="showInfo()">
         <option value="">Select Destination</option>
         <option value="kannur">Kannur</option>
@@ -76,17 +76,16 @@
 
             switch(selectedDestination) {
                 case "kannur":
-                    info = "<h2>Kannur</h2>"
-                           "<p>Kannur is a coastal city in the south Indian state of Kerala. It's known for its beaches, such as Payyambalam Beach and Meenkunnu Beach. The city is famous for its handloom industry and traditional dance forms like Theyyam.</p>";
-                           <p>Transportation:<a href="https://www.tripadvisor.in/Attractions-g777115-Activities-c59-Kannur_Kannur_District_Kerala.html"></p>
-                    break;
+                    info = "<h2>Kannur</h2>" +
+                           "<p>Kannur is a coastal city in the south Indian state of Kerala. It's known for its beaches, such as Payyambalam Beach and Meenkunnu Beach. The city is famous for its handloom industry and traditional dance forms like Theyyam.</p>" + "<h3 align=left><a href='https://www.holidify.com/places/kannur/sightseeing-and-things-to-do.html'>Famous Tourist Spots</a></h3>"+ "<h3 align=left><a href='https://www.tripadvisor.in/Attractions-g777115-Activities-c59-Kannur_Kannur_District_Kerala.html'>Transportation</a></h3>" + "<h3 align=left><a href='https://www.tripadvisor.in/Restaurants-g777115-Kannur_Kannur_District_Kerala.html'>Famous Foods in Kannur</a></h3>" ; 
+                           break;
                 case "alappuzha":
                     info = "<h2>Alappuzha</h2>" +
-                           "<p>Alappuzha, also known as Alleppey, is a city in the south Indian state of Kerala. It's famous for its backwaters, houseboat cruises, and serene beaches. Alappuzha is also known for its annual Nehru Trophy Boat Race, held during the Onam festival.</p>";
+                           "<p>Alappuzha, also known as Alleppey, is a city in the south Indian state of Kerala. It's famous for its backwaters, houseboat cruises, and serene beaches. Alappuzha is also known for its annual Nehru Trophy Boat Race, held during the Onam festival.</p>" + "<h3 align=left><a href='https://www.makemytrip.com/tripideas/places-to-visit-in-alleppey'>Famous Tourist Spots</a></h3>" + "<h3 align=left><a href='https://www.alappuzhaonline.in/city-guide/transport-in-alappuzha'>Transportation</a></h3>" + "<h3 align=left><a href='https://travelmax.in/india/kerala/alleppey/restaurants-in-alleppey/'>Famous foods in Alappuzha</a></h3>";
                     break;
                 case "kollam":
                     info = "<h2>Kollam</h2>" +
-                           "<p>Kollam, formerly known as Quilon, is a city in the state of Kerala, located on the shores of the Ashtamudi Lake and the Arabian Sea. It's known for its cashew industry, historic port, and picturesque backwaters. The Thangassery Lighthouse and Ashtamudi Lake are popular tourist attractions.</p>";
+                           "<p>Kollam, formerly known as Quilon, is a city in the state of Kerala, located on the shores of the Ashtamudi Lake and the Arabian Sea. It's known for its cashew industry, historic port, and picturesque backwaters. The Thangassery Lighthouse and Ashtamudi Lake are popular tourist attractions.</p>" + "<h3 align=left><a href='https://www.holidify.com/places/kollam/sightseeing-and-things-to-do.html'>Famous Tourist Spots</a></h3>" + "<h3 align=left><a href='https://www.justdial.com/Kollam/Transporters/nct-10495191'>Transportation</a></h3>" + "<h3 align=left><a href='https://www.thomascook.in/places-to-visit/dishes-in-kollam-12011#:~:text=Being%20a%20place%20of%20tradition,be%20found%20anywhere%20in%20Kollam.'>Famous foods in Kollam</a></h3>";
                     break;
                 // Add more cases for additional destinations
             }
