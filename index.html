@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>knowthespace</title>
-    <h1 align="center">KNOW THE SPACE</h1>
+    <title>Tourist Destination Information</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            background-image: url('tr.jpg'); 
+            background-image: url('pietro-de-grandi-T7K4aEPoGGk-unsplash.jpg'); /* Replace 'background-image.jpg' with the path to your background image */
             background-size: cover;
             background-position: center;
-            color: #000000;
+            color:black; /* Set text color to white for better contrast */
         }
 
         h1 {
@@ -25,7 +24,7 @@
             padding: 8px;
             margin-top: 10px;
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.8); 
+            background-color: rgba(255, 255, 255, 0.8); /* Set a semi-transparent white background for better readability */
             border: none;
             border-radius: 5px;
             box-sizing: border-box;
@@ -33,7 +32,7 @@
 
         #destinationInfo {
             margin-top: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.8); /* Set a semi-transparent white background */
             border: 1px solid #ccc;
             border-radius: 5px;
             padding: 20px;
@@ -49,13 +48,12 @@
     </style>
 </head>
 <body>
-    <p>Travel planning at its best. Build, organise, and map your custom in a free travel website designed for vacations, food places, accommodation, scenaries & road trips.</p>
     <h1>Select a Destination</h1>
     <select id="destinationSelect" onchange="showInfo()">
         <option value="">Select Destination</option>
-        <option value="Kannur">Kannur</option>
-        <option value="Alappuzha">Alappuzha</option>
-        <option value="Idukki">Idukki</option>
+        <option value="kannur">Kannur</option>
+        <option value="alappuzha">Alappuzha</option>
+        <option value="kollam">Kollam</option>
         <!-- Add more destinations as needed -->
     </select>
 
@@ -63,6 +61,38 @@
         <!-- Information about the selected destination will be displayed here -->
     </div>
 
+    <script>
+        function showInfo() {
+            var destinationSelect = document.getElementById("destinationSelect");
+            var destinationInfo = document.getElementById("destinationInfo");
+            var selectedDestination = destinationSelect.value;
 
+            if (selectedDestination === "") {
+                destinationInfo.innerHTML = "";
+                return;
+            }
+
+            var info = "";
+
+            switch(selectedDestination) {
+                case "kannur":
+                    info = "<h2>Kannur</h2>"
+                           "<p>Kannur is a coastal city in the south Indian state of Kerala. It's known for its beaches, such as Payyambalam Beach and Meenkunnu Beach. The city is famous for its handloom industry and traditional dance forms like Theyyam.</p>";
+                           <p>Transportation:<a href="https://www.tripadvisor.in/Attractions-g777115-Activities-c59-Kannur_Kannur_District_Kerala.html"></p>
+                    break;
+                case "alappuzha":
+                    info = "<h2>Alappuzha</h2>" +
+                           "<p>Alappuzha, also known as Alleppey, is a city in the south Indian state of Kerala. It's famous for its backwaters, houseboat cruises, and serene beaches. Alappuzha is also known for its annual Nehru Trophy Boat Race, held during the Onam festival.</p>";
+                    break;
+                case "kollam":
+                    info = "<h2>Kollam</h2>" +
+                           "<p>Kollam, formerly known as Quilon, is a city in the state of Kerala, located on the shores of the Ashtamudi Lake and the Arabian Sea. It's known for its cashew industry, historic port, and picturesque backwaters. The Thangassery Lighthouse and Ashtamudi Lake are popular tourist attractions.</p>";
+                    break;
+                // Add more cases for additional destinations
+            }
+
+            destinationInfo.innerHTML = info;
+        }
+    </script>
 </body>
 </html>
